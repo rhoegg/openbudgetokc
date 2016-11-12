@@ -5,6 +5,7 @@
 @import "bootstrap-overrides"; // custom styles to override Bootstrap defaults
 @import "base";
 @import "sections/sections";
+@import "contact";
 
 @import "treemap"; // D3 Treemap
 @import "flow"; // D3 Sankey diagram
@@ -92,4 +93,13 @@ footer {
 
 @media (max-width: $screen-sm-min){
   @include footer-height(200px);
+}
+
+
+.row.visualizations{
+  img{
+    max-height:214px;
+    margin-left:auto;
+    margin-right:auto;
+  }
 }
