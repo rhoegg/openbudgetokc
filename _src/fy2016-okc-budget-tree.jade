@@ -92,9 +92,9 @@
     }
 
   .row#chart
-  table.treemap
+  table.treemap.table-striped
     thead
-      th Item
+      th(style='text-align: left') Item
       th Expense
     tbody
 
@@ -223,7 +223,7 @@ script.
     function display(d) {
       $('table.treemap tbody').html('')
       d.values.sort(function(a, b) { return a.key.toUpperCase().localeCompare(b.key.toUpperCase())}).forEach(function(value) {
-        $('table.treemap tbody').append("<tr><td>" + value.key + "</td><td>$" + formatNumber(value.value) + "</td></tr>")
+        $('table.treemap tbody').append("<tr><td style='text-align: left'>" + value.key + "</td><td>$" + formatNumber(value.value) + "</td></tr>")
       });
 
       grandparent
