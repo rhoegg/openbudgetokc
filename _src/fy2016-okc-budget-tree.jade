@@ -82,9 +82,17 @@
       text-align:right;
     }
 
+    table.treemap th:nth-child(1) {
+      text-align: left;
+    }
+
     table.treemap tr td {
       border-top:1pt solid rgb(221, 221, 221);
       text-align:right;
+    }
+
+    table.treemap tr td:nth-child(2n + 1) {
+      text-align: left;
     }
 
     table.treemap th, td {
@@ -92,7 +100,7 @@
     }
 
   .row#chart
-  table.treemap
+  table.treemap.table-striped
     thead
       th Item
       th Expense
