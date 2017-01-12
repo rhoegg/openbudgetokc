@@ -82,9 +82,17 @@
       text-align:right;
     }
 
+    table.treemap th:nth-child(1) {
+      text-align: left;
+    }
+
     table.treemap tr td {
       border-top:1pt solid rgb(221, 221, 221);
       text-align:right;
+    }
+
+    table.treemap tr td:nth-child(2n + 1) {
+      text-align: left;
     }
 
     table.treemap th, td {
@@ -94,7 +102,7 @@
   .row#chart
   table.treemap.table-striped
     thead
-      th(style='text-align: left') Item
+      th Item
       th Expense
     tbody
 
@@ -223,7 +231,7 @@ script.
     function display(d) {
       $('table.treemap tbody').html('')
       d.values.sort(function(a, b) { return a.key.toUpperCase().localeCompare(b.key.toUpperCase())}).forEach(function(value) {
-        $('table.treemap tbody').append("<tr><td style='text-align: left'>" + value.key + "</td><td>$" + formatNumber(value.value) + "</td></tr>")
+        $('table.treemap tbody').append("<tr><td>" + value.key + "</td><td>$" + formatNumber(value.value) + "</td></tr>")
       });
 
       grandparent
