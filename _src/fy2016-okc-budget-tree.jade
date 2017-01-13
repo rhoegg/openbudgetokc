@@ -12,6 +12,11 @@
         margin-top: 6px;
         margin-bottom: 6px;
     }
+    .description {
+      font-weight: normal;
+      font-size: 14px;
+      margin: 6px 10% 20px;
+    }
     text {
       pointer-events: none;
     }
@@ -71,7 +76,7 @@
       width: 89vw;
       max-width:1140px;
       margin-left:-15px;
-      margin-top:30px;
+      margin-top:80px;
     }
   
     table.treemap tr {
@@ -121,6 +126,7 @@ script.
       rootname: "TOP",
       format: ",d",
        title: "",
+       description: "",
        width: 1000,
       height: 600
   };
@@ -181,6 +187,9 @@ script.
   
     if (opts.title) {
       $("#chart").prepend("<p class='title'>" + opts.title + "</p>");
+    }
+    if (opts.description){
+      $(".title").append("<p class='description'>" + opts.description + "</p>");
     }
     if (data instanceof Array) {
       root = { key: rname, values: data };
@@ -359,7 +368,7 @@ script.
                          .key(function(d) { return d.lob; })
                          .key(function(d) { return d.program })
                          .entries(res);
-            main({title: "City of Oklahoma City Budget - FY2016"}
+            main({title: "City of Oklahoma City Budget - FY2016", description: "Select year and account (revenues or expenses). Click on a fund to see the departments that receive its funding. Click on that department to see its spending or revenue. To step out of the department, click ‘Budget’ until you reach the desired department."}
               , {key: "Budget", values: data});
         }
     });
