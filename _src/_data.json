@@ -1,15 +1,46 @@
-
-
 {
   "globals": {
     "title": "Open Budget: OKC",
     "uri": "http://openbudgetokc.org"
   },
-
   "index": {
     "title": "Open Budget: OKC",
     "slug": "home"
+  },
+  "what-we-do": {
+    "title": "What We Do | Open Budget: OKC",
+    "slug": "what-we-do"
+  },
+  "who-we-are": {
+    "title": "Who We Are | Open Budget: OKC",
+    "slug": "who-we-are"
+  },
+  "contact": {
+    "title": "Contact | Open Budget: OKC",
+    "slug": "contact"
+  },
+  "budget-visuals": {
+    "title": "Budget Visualizations | Open Budget: OKC",
+    "slug": "budget-visuals"
+  },
+  "discuss": {
+    "title": "Discuss | Open Budget: OKC",
+    "slug": "discuss"
+  },
+  "404": {
+    "title": "404 | Open Budget: OKC",
+    "slug": "404"
+  },
+  "fy2016-okc-budget-tree": {
+    "title": "FY2016 OKC Budget | Open Budget: OKC",
+    "slug": "fy2016-okc-budget"
+  },
+  "budget-process": {
+    "title": "Timeline of OKC's Budget Process | Open Budget: OKC",
+    "slug": "okc-budget-process-timeline"
+  },
+  "budget-radar": {
+    "title": "Budget Radar | Open Budget: OKC",
+    "slug": "budget-radar"
   }
-
-
 }
