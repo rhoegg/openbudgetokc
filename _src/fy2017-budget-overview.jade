@@ -112,8 +112,8 @@
 
   .row
   .intro.col-md-8
-    h1 Budget Overview
-    p.description Select year and account (revenues or expenses). Click on a fund to see the departments that receive its funding. Click on that department to see its spending or revenue. To step out of the department, click ‘Budget’ until you reach the desired department.
+    h1 FY2017 Budget Overview
+    p.description Click on a fund to see the departments that receive its funding. Click on that department to see its spending or revenue. To step out of the department, click ‘Budget’ until you reach the desired department.
 
   .row#chart
   table.treemap.table-striped
@@ -372,7 +372,7 @@ script.
   }
 
   function buildTheChart(){
-    d3.json("data/fy2016/c4okc_fy2016_final.json", function(err, res) {
+    d3.json("data/fy2017/c4okc_fy2017.json", function(err, res) {
         if (!err) {
             var data = d3.nest()
                          .key(function(d) { return d.agency; })
