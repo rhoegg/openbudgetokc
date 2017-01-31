@@ -346,56 +346,56 @@
   {
     "agency": "City Manager",
     "fund": "GENERAL FUND",
-    "lob": "City Managers Office",
-    "program": "CITY MANAGER'S OFFICE",
+    "lob": "MAPS 3",
+    "program": "MAPS 3",
     "key": "BUDGET-VACANCY DISCOUNT",
     "value": "-675"
   },
   {
     "agency": "City Manager",
     "fund": "GENERAL FUND",
-    "lob": "City Managers Office",
-    "program": "CITY MANAGER'S OFFICE",
+    "lob": "MAPS 3",
+    "program": "MAPS 3",
     "key": "SALARIES AND WAGES",
     "value": "25523"
   },
   {
     "agency": "City Manager",
     "fund": "GENERAL FUND",
-    "lob": "City Managers Office",
-    "program": "CITY MANAGER'S OFFICE",
+    "lob": "MAPS 3",
+    "program": "MAPS 3",
     "key": "HEALTH AND WELFARE INSURANCE",
     "value": "5341"
   },
   {
     "agency": "City Manager",
     "fund": "GENERAL FUND",
-    "lob": "City Managers Office",
-    "program": "CITY MANAGER'S OFFICE",
+    "lob": "MAPS 3",
+    "program": "MAPS 3",
     "key": "RETIREMENT PENSION CONTRIB",
     "value": "1483"
   },
   {
     "agency": "City Manager",
     "fund": "GENERAL FUND",
-    "lob": "City Managers Office",
-    "program": "CITY MANAGER'S OFFICE",
+    "lob": "MAPS 3",
+    "program": "MAPS 3",
     "key": "EMPLOYEE PARKING",
     "value": "404"
   },
   {
     "agency": "City Manager",
     "fund": "GENERAL FUND",
-    "lob": "City Managers Office",
-    "program": "CITY MANAGER'S OFFICE",
+    "lob": "MAPS 3",
+    "program": "MAPS 3",
     "key": "CHARGEBACK-IT",
     "value": "131544"
   },
   {
     "agency": "City Manager",
     "fund": "GENERAL FUND",
-    "lob": "City Managers Office",
-    "program": "CITY MANAGER'S OFFICE",
+    "lob": "MAPS 3",
+    "program": "MAPS 3",
     "key": "CHARGEBACK-RISK MANAGEMENT",
     "value": "9039"
   },
@@ -33570,8 +33570,8 @@
   {
     "agency": "City Manager",
     "fund": "MAPS3 SALES TAX",
-    "lob": "City Managers Office",
-    "program": "CITY MANAGER'S OFFICE",
+    "lob": "MAPS 3",
+    "program": "MAPS 3",
     "key": "BUDGET-CAPITAL OUTLAY",
     "value": "305645025"
   },

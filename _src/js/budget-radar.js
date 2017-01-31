@@ -70,7 +70,7 @@ ob.display = ob.display || {};;
         var hash = Hash.parseWithDefault(["FY2016", "FY2017"]);
 
 
-        var title = hash[0] + " " + hash[1];
+        var title = hash[0] + " - " + hash[1];
 
 
         //--------------------------------------------------
