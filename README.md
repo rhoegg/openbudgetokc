@@ -59,6 +59,16 @@ npm install && npm start
 # npm install can be omitted on subsequent runs
 npm start
 ```
+
+### Deployment
+
+Currently deployment takes place by running either `npm build` or `yarn build`.
+
+This will build the project in the `docs` folder.  
+ Do this in a branch and push to master.  
+
+This will automatically update the site.
+
 #### Pitfalls
 
 * node version 6
