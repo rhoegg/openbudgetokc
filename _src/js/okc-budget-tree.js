@@ -1,22 +1,5 @@
-.container#chartContainer
-  style.
-
-  .row
-  .intro.col-md-8
-    h1 FY2016 Budget Overview
-    p.description Click on a fund to see the departments that receive its funding. Click on that department to see its spending or revenue. To step out of the department, click ‘Budget’ until you reach the desired department.
-
-  .row#chart
-  table.row.treemap.table-striped#chart-table
-    thead
-      th Item
-      th Expense
-    tbody
-
-script(src="http://code.jquery.com/jquery-1.7.2.min.js",charset='utf-8')
-script(src="http://d3js.org/d3.v3.min.js"              ,charset='utf-8')
-script(src="/js/data.js",charset='utf-8')
-script.
+;/* global $ */
+(function($){
   window.addEventListener('message', function(e) {
       var opts = e.data.opts;
       var data = e.data.data;
@@ -64,6 +47,8 @@ script.
         .sort(function(a, b) { return a.value - b.value; })
         .ratio(height / width * 0.5 * (1 + Math.sqrt(5)))
         .round(false);
+
+    $('#chart').empty();
 
     var svg = d3.select("#chart").append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -263,15 +248,18 @@ script.
   }
 
   function buildTheChart(){
-    d3.json("data/fy2016/c4okc_fy2016_final.json", function(err, res) {
+    
+    d3.json("data/fy2017/c4okc_fy2017.json", function(err, res) {
         if (!err) {
             var data = d3.nest()
                          .key(function(d) { return d.agency; })
                          .key(function(d) { return d.lob; })
                          .key(function(d) { return d.program })
                          .entries(res);
+
             main({title: ""},{key: "Budget", values: data});
         }
+
     });
   }
 
@@ -286,7 +274,10 @@ script.
   }
 
   $( window ).resize(function() {
-    $('#chart').empty();
+    //we used to empty #chart right here, but that's been moved into main to prevent duplicates - @jeinokc
     updateDefaultSizes();
     buildTheChart();
   });
+})($);
+
+  
