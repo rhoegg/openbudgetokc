@@ -48,6 +48,8 @@
         .ratio(height / width * 0.5 * (1 + Math.sqrt(5)))
         .round(false);
 
+    $('#chart').empty();
+
     var svg = d3.select("#chart").append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.bottom + margin.top)
@@ -246,6 +248,7 @@
   }
 
   function buildTheChart(){
+    
     d3.json("data/fy2017/c4okc_fy2017.json", function(err, res) {
         if (!err) {
             var data = d3.nest()
@@ -253,8 +256,10 @@
                          .key(function(d) { return d.lob; })
                          .key(function(d) { return d.program })
                          .entries(res);
+
             main({title: ""},{key: "Budget", values: data});
         }
+
     });
   }
 
@@ -269,7 +274,7 @@
   }
 
   $( window ).resize(function() {
-    $('#chart').empty();
+    //we used to empty #chart right here, but that's been moved into main to prevent duplicates - @jeinokc
     updateDefaultSizes();
     buildTheChart();
   });
