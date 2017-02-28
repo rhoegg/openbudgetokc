@@ -6,7 +6,7 @@
     h1 FY2017 Budget Overview
     p.description Click on a fund to see the departments that receive its funding. Click on that department to see its spending or revenue. To step out of the department, click ‘Budget’ until you reach the desired department.
 
-  .row#chart
+  .row#chart(data-json-file = "data/fy2017/c4okc_fy2017.json")
   table.row.treemap.table-striped#chart-table
     thead
       th Item
