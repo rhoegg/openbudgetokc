@@ -1,135 +1,5 @@
-.container#chartContainer
-  style.
-    #chart {
-      background: #fff;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      padding-bottom: 10px;
-      height: 100% !important;
-    }
-
-    .intro {
-      padding: 0;
-    }
-
-    .title {
-        font-weight: bold;
-        font-size: 24px;
-        text-align: center;
-        margin-top: 6px;
-        margin-bottom: 6px;
-    }
-    .description {
-      font-weight: normal;
-      font-size: 14px;
-      margin: 6px 0;
-    }
-    text {
-      pointer-events: none;
-    }
-
-    #chart, #chart-table {
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    .grandparent text {
-      font-weight: bold;
-    }
-
-    rect {
-      fill: none;
-      stroke: #fff;
-    }
-
-    rect.parent,
-    .grandparent rect {
-      stroke-width: 2px;
-    }
-
-    rect.parent {
-        pointer-events: none;
-    }
-
-    .grandparent rect {
-      fill: orange;
-    }
-
-    .grandparent:hover rect {
-      fill: #ee9700;
-    }
-
-    .children rect.parent,
-    .grandparent rect {
-      cursor: pointer;
-    }
-
-    .children rect.parent {
-      fill: #bbb;
-      fill-opacity: 1;
-      -webkit-transition: fill-opacity .5s;
-      transition: fill-opacity .5s;
-    }
-
-    .children:hover{
-      cursor: pointer;
-    }
-
-    .children:hover rect.parent {
-      fill: #bbb;
-      fill-opacity: .85;
-    }
-
-    .children:hover rect.child {
-      fill: #bbb;
-    }
-
-    table.treemap {
-      width: 89vw;
-      max-width:1140px;
-    }
-
-    table.treemap tr {
-      min-width:98%;
-    }
-    table.treemap th {
-      border-bottom:2pt solid rgb(221, 221, 221);
-      text-align:right;
-    }
-
-    table.treemap th:nth-child(1) {
-      text-align: left;
-    }
-
-    table.treemap tr td {
-      border-top:1pt solid rgb(221, 221, 221);
-      text-align:right;
-    }
-
-    table.treemap tr td:nth-child(2n + 1) {
-      text-align: left;
-    }
-
-    table.treemap th, td {
-      padding: 4px;
-    }
-
-
-  .row
-  .intro.col-md-8
-    h1 FY2016 Budget Overview
-    p.description Click on a fund to see the departments that receive its funding. Click on that department to see its spending or revenue. To step out of the department, click ‘Budget’ until you reach the desired department.
-
-  .row#chart
-  table.row.treemap.table-striped#chart-table
-    thead
-      th Item
-      th Expense
-    tbody
-
-script(src="http://code.jquery.com/jquery-1.7.2.min.js",charset='utf-8')
-script(src="http://d3js.org/d3.v3.min.js"              ,charset='utf-8')
-script(src="/js/data.js",charset='utf-8')
-script.
+;/* global $ */
+(function($){
   window.addEventListener('message', function(e) {
       var opts = e.data.opts;
       var data = e.data.data;
@@ -376,7 +246,7 @@ script.
   }
 
   function buildTheChart(){
-    d3.json("data/fy2016/c4okc_fy2016_final.json", function(err, res) {
+    d3.json("data/fy2017/c4okc_fy2017.json", function(err, res) {
         if (!err) {
             var data = d3.nest()
                          .key(function(d) { return d.agency; })
@@ -403,3 +273,6 @@ script.
     updateDefaultSizes();
     buildTheChart();
   });
+})($);
+
+  
