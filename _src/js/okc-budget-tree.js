@@ -1,4 +1,6 @@
-window.addEventListener('message', function(e) {
+;/* global $ */
+(function($){
+  window.addEventListener('message', function(e) {
       var opts = e.data.opts;
       var data = e.data.data;
       return main(opts, data)
@@ -271,3 +273,6 @@ window.addEventListener('message', function(e) {
     updateDefaultSizes();
     buildTheChart();
   });
+})($);
+
+  

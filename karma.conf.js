@@ -17,6 +17,7 @@ module.exports = function(config) {
     files: [
       {pattern:"http://d3js.org/d3.v3.min.js"},
       {pattern:"https://d3js.org/d3-collection.v1.min.js"},
+      {pattern:"http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"},
       {pattern:'_src/js/*'},
       {pattern:'_test/**'}
     ],
