@@ -248,8 +248,8 @@
   }
 
   function buildTheChart(){
-    
-    d3.json("data/fy2017/c4okc_fy2017.json", function(err, res) {
+    var jsonPath = $('#chart').data('jsonFile');
+    d3.json(jsonPath, function(err, res) {
         if (!err) {
             var data = d3.nest()
                          .key(function(d) { return d.agency; })
